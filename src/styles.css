@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+
+:root {
+  color: #111827;
+  background: #f8f9fa;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-nav-wrap {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  z-index: 50;
+  width: calc(100% - 32px);
+  max-width: max-content;
+  transform: translateX(-50%);
+  padding: 0 12px;
+}
+
+.portfolio-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  max-width: 100%;
+  gap: 0;
+  overflow-x: auto;
+  padding: 3px;
+  border: 1px solid rgb(255 255 255 / 0.82);
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 0.9);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.09);
+  backdrop-filter: blur(14px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.portfolio-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-nav-pill {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 30px;
+  border-radius: 9999px;
+  background: #6672f2;
+  box-shadow: 0 6px 14px rgb(99 102 241 / 0.22);
+  transition:
+    transform 500ms cubic-bezier(0.25, 1, 0.5, 1),
+    width 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.portfolio-nav-link {
+  position: relative;
+  z-index: 1;
+  height: 30px;
+  flex-shrink: 0;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: #555b66;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 30px;
+  outline: none;
+  cursor: pointer;
+  transition: color 260ms ease;
+}
+
+.portfolio-nav-link:hover {
+  color: #111827;
+}
+
+.portfolio-nav-link.is-selected {
+  color: #ffffff;
+}
+
+.portfolio-nav-link:focus-visible {
+  box-shadow:
+    0 0 0 2px rgb(255 255 255 / 0.95),
+    0 0 0 4px rgb(99 102 241 / 0.35);
+}
+
+@media (max-width: 520px) {
+  .portfolio-nav-wrap {
+    top: 12px;
+    padding: 0 8px;
+  }
+
+  .portfolio-nav-link {
+    padding: 0 13px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-span {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 0.78;
+}
+.hero-scroll-wrapper {
+  height: 300vh;
+  width: 100%;
+}
+
+.stage-3d {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.stack-card {
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -225px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+
+.center-card {
+  z-index: 10;
+}

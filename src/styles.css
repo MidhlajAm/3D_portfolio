@@ -24,7 +24,7 @@ body,
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -61,6 +61,41 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(14px);
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Stack Card Hover Effects (3D preserve-3d workaround) */
+.stack-card .inner-card {
+  transition: transform 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98), box-shadow 0.5s ease;
+}
+
+/* 1. Far Left Card Hover/Active */
+.stack-card.pos-left-2:hover .inner-card,
+.stack-card.pos-left-2.active .inner-card {
+  transform: translateX(-50px) translateZ(850px) rotateY(30deg) scale(1.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+/* 2. Mid Left Card Hover/Active */
+.stack-card.pos-left-1:hover .inner-card,
+.stack-card.pos-left-1.active .inner-card {
+  transform: translateX(-30px) translateZ(450px) rotateY(15deg) scale(1.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+/* 4. Mid Right Card Hover/Active */
+.stack-card.pos-right-1:hover .inner-card,
+.stack-card.pos-right-1.active .inner-card {
+  transform: translateX(30px) translateZ(450px) rotateY(-15deg) scale(1.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+/* 5. Far Right Card Hover/Active */
+.stack-card.pos-right-2:hover .inner-card,
+.stack-card.pos-right-2.active .inner-card {
+  transform: translateX(50px) translateZ(850px) rotateY(-30deg) scale(1.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+/* Center Card Hover/Active */
+.stack-card.pos-center:hover .inner-card,
+.stack-card.pos-center.active .inner-card {
+  transform: translateY(-20px) scale(1.05);
 }
 
 .portfolio-nav::-webkit-scrollbar {

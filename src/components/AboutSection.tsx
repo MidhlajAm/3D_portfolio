@@ -69,15 +69,16 @@ export default function AboutSection() {
                         className="space-y-4 text-gray-600 text-base md:text-lg leading-relaxed mb-10"
                     >
                         <p>
-                            Computer Science undergraduate with 6+ years of mobile app development experience, including a professional Flutter internship. Proficient in Dart, Kotlin, Java, and Python, with hands-on experience in Firebase, REST APIs, GetX, MVVM, and real-time systems.
+                            Computer Science undergraduate with 6+ years of software development experience across mobile and web platforms, including a professional Flutter internship. Proficient in Dart, Kotlin, Java, Python, and modern web technologies, with hands-on experience in Firebase, REST APIs, GetX, MVVM, and real-time systems.
                         </p>
                         <p>
-                            I architect and publish production-grade apps on Google Play—managing everything from high-fidelity UI design to background backend integration. Whether engineering real-time sensor platforms or custom cross-platform applications, I prioritize code maintainability and exceptional user experience.
+                            I architect and publish production-grade mobile apps on Google Play and build responsive, dynamic web applications—managing everything from high-fidelity UI design to robust backend integration. Whether engineering real-time sensor platforms or custom cross-platform web and mobile solutions, I prioritize code maintainability and an exceptional user experience.
                         </p>
                     </motion.div>
 
                     <motion.button
                         variants={fadeInUp}
+                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                         style={{
                             boxShadow: "0px 6px 0px #5a37c4, 0px 12px 20px rgba(122, 82, 244, 0.4)"
                         }}
@@ -111,18 +112,22 @@ export default function AboutSection() {
                 </motion.div>
 
                 {/* Right Column: Animated Hero Image & Overlapping Badge */}
-                <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
+                <div className="hidden lg:flex lg:col-span-6 relative justify-center lg:justify-end">
                     {/* Main Photo Slide-in */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.92, y: 30 }}
                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-                        className="relative w-full max-w-[480px] h-[480px] md:h-[520px] rounded-[32px] overflow-hidden"
+                        className="relative w-full max-w-[480px] h-[480px] md:h-[520px] flex items-center justify-center"
                     >
-                        <img
-                            src="https://res.cloudinary.com/dezwll9jv/image/upload/v1785583042/robot_c5r1cu.jpg"
-                            className="w-full h-full object-cover object-center"
+                        <video 
+                            src="https://ik.imagekit.io/midhlaj786/Onam/robot_about.mp4" 
+                            autoPlay 
+                            loop 
+                            muted 
+                            playsInline
+                            className="w-[85%] h-[85%] object-contain pointer-events-none"
                         />
                     </motion.div>
                 </div>

@@ -176,7 +176,10 @@ export default function ProfileCard({
       </div>
 
       {/* 4. Call-to-Action Button */}
-      <button className="mt-4 px-10 py-4 rounded-full bg-white text-gray-950 font-bold text-base md:text-lg border-[4px] border-[#EEEEFD] hover:border-[#E2E2FC] hover:bg-gray-50/80 transition-all duration-200 active:scale-95 shadow-sm">
+      <button 
+        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+        className="mt-4 px-10 py-4 rounded-full bg-white text-gray-950 font-bold text-base md:text-lg border-[4px] border-[#EEEEFD] hover:border-[#E2E2FC] hover:bg-gray-50/80 transition-all duration-200 active:scale-95 shadow-sm"
+      >
         Let's Work Together!
       </button>
     </div>

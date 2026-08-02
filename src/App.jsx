@@ -4,8 +4,10 @@ import ShapesCanvas from './components/3D/ShapesCanvas';
 import MarqueeBackground from './components/MarqueeBackground';
 import ProfileCard from './components/ProfileCard';
 import AboutSection from './components/AboutSection';
-import StackSection from './components/StackSection';
-import Footer from './components/Footer';
+import SkillsSection from './components/SkillsSection';
+import ServicesSection from './components/ServicesSection';
+import ProjectsSection from './components/ProjectsSection';
+import ContactSection from './components/ContactSection';
 
 export default function App() {
   return (
@@ -26,10 +28,6 @@ export default function App() {
           opacity={1}
         />
 
-        {/* Blending Gradient to seamlessly mix Hero white into About gray */}
-        {/* Placed at z-0 so it renders BEHIND the 3D shapes */}
-        <div className="absolute inset-x-0 -bottom-1 h-32 bg-gradient-to-b from-white to-canvas z-0 pointer-events-none"></div>
-
         {/* Layer 10 — 3D Shapes Canvas */}
         <div className="absolute inset-0 z-10 pointer-events-none">
           <ShapesCanvas />
@@ -41,19 +39,23 @@ export default function App() {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section
-        id="about"
-        className="relative min-h-screen w-full flex items-center justify-center py-20 z-20"
-      >
+      {/* ABOUT SECTION - Changed to white to match the new video background */}
+      <div id="about" className="relative z-20 bg-white pb-24 md:pb-32">
         <AboutSection />
-      </section>
+        
+      </div>
 
-      {/* STACK SECTION (GSAP 3D ScrollTrigger) */}
-      <StackSection />
+      {/* SKILLS SECTION */}
+      <SkillsSection />
 
-      {/* Footer with Video Background */}
-      <Footer />
+      {/* SERVICES SECTION */}
+      <ServicesSection />
+
+      {/* PROJECTS SECTION (Horizontal Scroll) */}
+      <ProjectsSection />
+
+      {/* CONTACT SECTION (Combined with Footer Video Background) */}
+      <ContactSection />
 
       {/* Layer 50 — Fixed Navigation Bar */}
       <NavigationBar />

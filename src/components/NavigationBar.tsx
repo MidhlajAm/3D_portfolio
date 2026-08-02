@@ -1,6 +1,6 @@
 import React, { KeyboardEvent, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
-const NAV_ITEMS = ['Home', 'About', 'Stack', 'Services', 'Projects', 'Contact'] as const;
+const NAV_ITEMS = ['Home', 'About', 'Skills', 'Services', 'Projects', 'Contact'] as const;
 
 type NavItem = (typeof NAV_ITEMS)[number];
 type PillStyle = { width: number; x: number };
@@ -63,7 +63,12 @@ export default function NavigationBar() {
           }
         });
       },
-      { threshold: 0.5 } // Triggers when section is 50% visible in view
+      { 
+        // Use a root margin that effectively creates a trigger line in the middle of the screen
+        // This fixes the issue for sections taller than the viewport (like Projects h-[500vh])
+        // which could never reach a 50% visibility threshold.
+        rootMargin: "-49% 0px -49% 0px" 
+      } 
     );
 
     NAV_ITEMS.forEach((item) => {

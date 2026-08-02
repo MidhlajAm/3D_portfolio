@@ -17,7 +17,7 @@ interface ProfileCardProps {
 
 export default function ProfileCard({
   name = 'Midhlaj AM',
-  avatarUrl = 'src/assets/midhalaj_avatar_og.jpg',
+  avatarUrl = 'https://ik.imagekit.io/midhlaj786/Onam/IMG_1924.jpg',
   roleChangeInterval = 3000,
 }: ProfileCardProps) {
   const [roleIndex, setRoleIndex] = useState(0);

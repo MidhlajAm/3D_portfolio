@@ -2,7 +2,7 @@
 
 Welcome to the open-source repository of my personal developer portfolio! This project was designed and engineered from the ground up to be more than just a list of links—it is a tactile, 3D interactive experience built with modern web technologies. 
 
-🌐 **Live Demo:** [midhlajam.me](https://midhlajam.me) *(Update with your actual domain)*
+🌐 **Live Demo:** [ieeepoetfolio3dmidhlajam.netlify.app](https://ieeepoetfolio3dmidhlajam.netlify.app/)
 
 ![Portfolio Preview](https://ik.imagekit.io/midhlaj786/Onam/IMG_1924.jpg) *(Replace with a screenshot of your portfolio if desired)*
 

@@ -4,7 +4,7 @@ Welcome to the open-source repository of my personal developer portfolio! This p
 
 🌐 **Live Demo:** [ieeepoetfolio3dmidhlajam.netlify.app](https://ieeepoetfolio3dmidhlajam.netlify.app/)
 
-![Portfolio Preview](https://ik.imagekit.io/midhlaj786/Onam/IMG_1924.jpg) *(Replace with a screenshot of your portfolio if desired)*
+
 
 ---
 
@@ -94,7 +94,7 @@ npm run preview
 
 I am a Software Engineer and UI/UX enthusiast with a deep passion for building robust mobile and web applications. 
 
-- **LinkedIn:** [Midhlaj AM](https://linkedin.com/in/midhlajam) *(Update with your link)*
+- **LinkedIn:** [Midhlaj AM](https://www.linkedin.com/in/midhlaj-am/)
 - **GitHub:** [@MidhlajAm](https://github.com/MidhlajAm)
 - **Email:** [midhlaj@example.com](mailto:midhlaj@example.com) *(Update with your email)*
 

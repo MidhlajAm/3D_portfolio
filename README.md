@@ -4,6 +4,8 @@ Welcome to the open-source repository of my personal developer portfolio! This p
 
 🌐 **Live Demo:** [ieeepoetfolio3dmidhlajam.netlify.app](https://ieeepoetfolio3dmidhlajam.netlify.app/)
 
+https://res.cloudinary.com/dezwll9jv/video/upload/v1786891320/softwareengineering_webdevelopment_reactjs_flutter_mobileappdevelopment_uiux_threejs_frontend_Midhlaj_AM_myn6a3.mp4
+
 
 
 ---
@@ -96,7 +98,7 @@ I am a Software Engineer and UI/UX enthusiast with a deep passion for building r
 
 - **LinkedIn:** [Midhlaj AM](https://www.linkedin.com/in/midhlaj-am/)
 - **GitHub:** [@MidhlajAm](https://github.com/MidhlajAm)
-- **Email:** [midhlaj@example.com](mailto:midhlaj@example.com) *(Update with your email)*
+- **Email:** [midhlaj.am786@gmail.com](mailto:midhlaj.am786@gmail.com)
 
 If you find this repository helpful or inspiring for your own portfolio, feel free to give it a ⭐️!
 
